@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Board</title>
+
+    <script>
+        function togglePassword() {
+            var pw = document.getElementById("password");
+            if (pw.type === "password") {
+                pw.type = "text";
+            } else {
+                pw.type = "password";
+            }
+        }
+    </script>
+</head>
+
+<body style="
+    margin:0;
+    background-image:url('loginbg.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    height:100vh;
+">
+
+<!-- Login Box -->
+<div style="
+    width:320px;
+    margin:auto;
+    margin-top:120px;
+    padding:20px;
+    background-color:rgba(255,255,255,0.9);
+    border:2px solid black;
+    text-align:center;
+">
+
+    <h2>Job Board Login</h2>
+
+    <!-- Login goes to 2nd page -->
+    <form action="C:\Users\veene.LAPTOP-VQNJ8SHT\OneDrive\html\Home.html">
+
+        Email ID:<br>
+        <input type="email" name="email" required>
+        <br><br>
+
+        Password:<br>
+        <input type="password" id="password" name="password"
+               pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&]).{8,}"
+               title="Password must contain at least 8 characters, including uppercase, lowercase, number, and special character"
+               required>
+
+        <br><br>
+
+        <!-- Show Password Button -->
+        <input type="button" value="Show / Hide" onclick="togglePassword()">
+        <br><br>
+
+        <input type="submit" value="Login">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</div>
+
+</body>
+</html>
