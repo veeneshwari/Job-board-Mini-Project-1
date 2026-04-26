@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #e6f0ff;
+
+    background: radial-gradient(circle at center,
+        rgba(0, 0, 0, 0.95) 20%,
+        rgba(10, 20, 60, 0.9) 50%,
+        rgba(0, 150, 255, 0.6) 100%);
+}
+
+/* Center container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login box */
+.box {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,150,255,0.4);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+/* Button */
+button {
+    width: 95%;
+    padding: 10px;
+    background: #4da6ff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1a8cff;
+}
+
+/* Links */
+a {
+    color: #4da6ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Error message */
+.error {
+    color: #ff4d4d;
+    font-size: 14px;
+}
+
+/* Extra line under button */
+.info {
+    font-size: 13px;
+    margin-top: 10px;
+    color: #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="box">
+        <h2>Login</h2>
+        <form action="C:\Users\veene.LAPTOP-VQNJ8SHT\OneDrive\Frontend\Home.html">
+        <form onsubmit="return validateForm()">
+            <input type="text" id="username" placeholder="Email or Username" required>
+
+            <input type="password" id="password" placeholder="Password" required>
+
+            <p class="error" id="errorMsg"></p>
+
+            <button type="submit">Login </button>
+
+        <p style="margin-top: 15px;">
+            Don't have an account? 
+            <a href="C:\Users\veene.LAPTOP-VQNJ8SHT\OneDrive\Frontend\NewAccount.html">Create New Account</a>
+        </form>
+        </p>
+    </div>
+</div>
+
+<script>
+function validateForm() {
+    let password = document.getElementById("password").value;
+    let errorMsg = document.getElementById("errorMsg");
+
+    let pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
+    if (!pattern.test(password)) {
+        errorMsg.textContent = "Password must include uppercase, lowercase, number, and special character!";
+        return false;
+    }
+
+    errorMsg.textContent = "";
+    alert("Login Successful!");
+    return true;
+}
+</script>
+
+</body>
+</html>

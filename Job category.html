@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Job Categories</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #e6f0ff;
+
+    background: radial-gradient(circle at center,
+        rgba(0, 0, 0, 0.95) 20%,
+        rgba(10, 20, 60, 0.9) 50%,
+        rgba(0, 150, 255, 0.6) 100%);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle, rgba(0,150,255,0.4), transparent 70%);
+    filter: blur(100px);
+    z-index: -1;
+}
+h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    margin: 20px auto;
+    padding: 20px;
+    width: 40%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,150,255,0.4);
+}
+ /* Home Button */
+        .home-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #111827;
+            color: #4da6ff;
+            padding: 8px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid rgba(77,166,255,0.5);
+        }
+
+        .home-btn:hover {
+            background: #1f2937;
+        }
+
+
+
+.content {
+    width: 60%;
+}
+
+.box img {
+    width: 20%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: -20px;
+}
+
+.box h3 {
+    color: #4da6ff;
+}
+
+ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+</style>
+</head>
+
+<body>
+<!-- Home Button -->
+<a href="C:\Users\veene.LAPTOP-VQNJ8SHT\OneDrive\Frontend\Home.html" class="home-btn">Home</a>
+
+
+<h2>Job Categories</h2>
+
+<div class="container">
+
+    <div class="box">
+        <div class="content">
+            <h3>1️⃣ Information Technology (IT) Jobs</h3>
+            <ul>
+                <li>Software Developer</li>
+                <li>Web Developer</li>
+                <li>Mobile App Developer</li>
+                <li>Network Administrator</li>
+                <li>Cyber Security Analyst</li>
+            </ul>
+        </div>
+        <img src="C:\Users\veene.LAPTOP-VQNJ8SHT\OneDrive\Frontend\IT Jobs.jpeg">
+    </div>
+
+    <div class="box">
+        <div class="content">
+            <h3>2️⃣ Data & Analytics Jobs</h3>
+            <ul>
+                <li>Data Analyst</li>
+                <li>Business Analyst</li>
+                <li>Data Scientist</li>
+                <li>Database Administrator</li>
+            </ul>
+        </div>
+        <img src="C:\Users\veene.LAPTOP-VQNJ8SHT\OneDrive\Frontend\Data analyst.jpeg">
+    </div>
+
+    <div class="box">
+        <div class="content">
+            <h3>3️⃣ Design & Creative Jobs</h3>
+            <ul>
+                <li>Graphic Designer</li>
+                <li>UI/UX Designer</li>
+                <li>Video Editor</li>
+                <li>Animator</li>
+            </ul>
+        </div>
+        <img src="C:\Users\veene.LAPTOP-VQNJ8SHT\OneDrive\Frontend\Design and creative jobs.jpeg">
+    </div>
+
+    <div class="box">
+        <div class="content">
+            <h3>4️⃣ Marketing & Sales Jobs</h3>
+            <ul>
+                <li>Digital Marketing Executive</li>
+                <li>SEO Analyst</li>
+                <li>Content Writer</li>
+                <li>Sales Executive</li>
+            </ul>
+        </div>
+        <img src="C:\Users\veene.LAPTOP-VQNJ8SHT\OneDrive\Frontend\Marketing and sales.jpeg">
+    </div>
+
+    <div class="box">
+        <div class="content">
+            <h3>5️⃣ Finance & Accounting Jobs</h3>
+            <ul>
+                <li>Accountant</li>
+                <li>Financial Analyst</li>
+                <li>Banking Officer</li>
+                <li>Tax Consultant</li>
+            </ul>
+        </div>
+        <img src="C:\Users\veene.LAPTOP-VQNJ8SHT\OneDrive\Frontend\Finance and Accounting.jpeg">
+    </div>
+
+</div>
+
+</body>
+</html>

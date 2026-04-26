@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Skills & Eligibility</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #e6f0ff;
+
+    background: radial-gradient(circle at center,
+        rgba(0, 0, 0, 0.95) 20%,
+        rgba(10, 20, 60, 0.9) 50%,
+        rgba(0, 150, 255, 0.6) 100%);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle, rgba(0,150,255,0.4), transparent 70%);
+    filter: blur(100px);
+    z-index: -1;
+}
+
+h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Home Button */
+.home-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #111827;
+    color: #4da6ff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid rgba(77,166,255,0.5);
+}
+
+.home-btn:hover {
+    background: #1f2937;
+}
+
+.container {
+    padding: 20px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    margin: 20px auto;
+    padding: 20px;
+    width: 70%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,150,255,0.4);
+}
+
+.content {
+    width: 65%;
+}
+
+.box img {
+    width: 30%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Thank You Button Container */
+.thank-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Button Style */
+.thank-btn {
+    background: #111827;
+    color: #4da6ff;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid rgba(77,166,255,0.5);
+    box-shadow: 0 0 10px rgba(0,150,255,0.4);
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.thank-btn:hover {
+    background: #1f2937;
+    transform: scale(1.05);
+}
+
+.box h3 {
+    color: #4da6ff;
+}
+
+ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- FIXED HOME LINK -->
+<a href="Home.html" class="home-btn">Home</a>
+
+<h2>🎯 Skills & Eligibility</h2>
+
+<div class="container">
+
+    <div class="box">
+        <div class="content">
+            <h3>🔧 Technical Skills</h3>
+            <ul>
+                <li>Programming: Java, Python, C</li>
+                <li>Web: HTML, CSS, JavaScript</li>
+                <li>Database: SQL, MySQL</li>
+                <li>Tools: Excel, Power BI</li>
+                <li>Design: Photoshop, Illustrator</li>
+            </ul>
+        </div>
+        <!-- FIXED IMAGE PATH -->
+        <img src="Technical Skill.png" alt="Technical Skills">
+    </div>
+
+    <div class="box">
+        <div class="content">
+            <h3>💬 Soft Skills</h3>
+            <ul>
+                <li>Communication</li>
+                <li>Teamwork</li>
+                <li>Problem-solving</li>
+                <li>Time management</li>
+                <li>Adaptability</li>
+            </ul>
+        </div>
+        <img src="Soft Skills.png" alt="Soft Skills">
+    </div>
+
+    <div class="box">
+        <div class="content">
+            <h3>🎓 Eligibility Criteria</h3>
+            <ul>
+                <li>Undergraduate degree or diploma</li>
+                <li>Basic computer knowledge</li>
+                <li>Good communication</li>
+                <li>Willingness to learn</li>
+            </ul>
+        </div>
+        <img src="Eligibility Criteria.png" alt="Eligibility">
+    </div>
+
+    <div class="box">
+        <div class="content">
+            <h3>🔗 Skill–Job Mapping</h3>
+            <ul>
+                <li>IT: Programming & DB</li>
+                <li>Data: Excel & Analysis</li>
+                <li>Design: Creativity & Tools</li>
+                <li>Marketing: Communication</li>
+                <li>HR: Interpersonal skills</li>
+            </ul>
+        </div>
+        <img src="Skill Job Mapping.png" alt="Skill Mapping">
+    </div>
+
+</div>
+
+<!-- FIXED THANK YOU BUTTON -->
+<div class="thank-container">
+    <a href="C:\Users\veene.LAPTOP-VQNJ8SHT\OneDrive\Frontend\Thankyou.html">
+        <button class="thank-btn">Thank You</button>
+    </a>
+</div>
+
+</body>
+</html>

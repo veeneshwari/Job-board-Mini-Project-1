@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Create Account</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #e6f0ff;
+
+    background: radial-gradient(circle at center,
+        rgba(0, 0, 0, 0.95) 20%,
+        rgba(10, 20, 60, 0.9) 50%,
+        rgba(0, 150, 255, 0.6) 100%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,150,255,0.4);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+button {
+    width: 95%;
+    padding: 10px;
+    background: #4da6ff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1a8cff;
+}
+
+a {
+    color: #4da6ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: #ff4d4d;
+    font-size: 14px;
+}
+
+/* Eye icon positioning */
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    width: 90%;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="box">
+        <h2>Create Account</h2>
+
+        <!-- ✅ FIXED FORM LINK -->
+        <form action="index.html" onsubmit="return validateForm()">
+
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+
+            <!-- Password -->
+            <div class="password-box">
+                <input type="password" id="password" placeholder="Password" required>
+                <span class="eye-icon" onclick="togglePassword('password')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4da6ff" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                </span>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="password-box">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <span class="eye-icon" onclick="togglePassword('confirmPassword')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4da6ff" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                </span>
+            </div>
+
+            <p class="error" id="errorMsg"></p>
+
+            <button type="submit">Create Account</button>
+
+        </form>
+
+        <p style="margin-top: 15px;">
+            Already have an account? 
+            <!-- ✅ FIXED LOGIN LINK -->
+            <a href="index.html">Login</a>
+        </p>
+    </div>
+</div>
+
+<script>
+function validateForm() {
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let username = document.getElementById("username").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    let errorMsg = document.getElementById("errorMsg");
+
+    if (!name || !email || !username || !phone || !password || !confirmPassword) {
+        errorMsg.textContent = "All fields are required!";
+        return false;
+    }
+
+    let pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
+    if (!pattern.test(password)) {
+        errorMsg.textContent = "Password must include uppercase, lowercase, number, and special character!";
+        return false;
+    }
+
+    if (password !== confirmPassword) {
+        errorMsg.textContent = "Passwords do not match!";
+        return false;
+    }
+
+    alert("Account Created Successfully!");
+    return true;
+}
+
+/* Toggle Password */
+function togglePassword(fieldId) {
+    let input = document.getElementById(fieldId);
+
+    if (input.type === "password") {
+        input.type = "text";
+    } else {
+        input.type = "password";
+    }
+}
+</script>
+
+</body>
+</html>
